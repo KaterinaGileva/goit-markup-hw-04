@@ -17,6 +17,7 @@
     --logo-cl: #000000;
     --accent-cl: #2196F3;
     --transparent-cl:rgba(255, 255, 255, 0.6);
+    --icons-cl: #AFB1B8;
 
     /*background-colors*/
     --main-bg-cl: #FFFFFF;
@@ -155,6 +156,13 @@ border: 1px solid var(--header-border-cl);
     padding-bottom: 32px;
 }
 
+/*Studio header icons*/  
+
+.contact .icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
 .header .contact {
     margin-left: auto;   
 }
@@ -181,6 +189,10 @@ border: 1px solid var(--header-border-cl);
 .contact .link {
 padding-top: 32px;
 padding-bottom: 32px;
+display: flex;
+    align-items: center;
+
+    color: ;
 }
 
 .nav .link:hover,
@@ -373,6 +385,7 @@ text-align: center;
 text-align: center;
 font-size: 16px;
 line-height: 1.19;
+margin-bottom: 16px;
 }
 
 .team .member {
@@ -383,6 +396,51 @@ line-height: 1.19;
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
 }
+
+/* Social icons */
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    background-color: var(--main-bg-cl);
+    color: var(--icons-cl);
+
+    border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+    color: var(--main-bg-cl);
+    background-color: var(--accent-cl);
+}
+
+.socials-icon {
+    fill: currentColor;
+}
+
+/* .socials-icon {
+  fill: #303030;
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+  fill: #ff6c00;
+} */
+
+/**
 
 /*============================
 | Portfolio page
