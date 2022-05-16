@@ -1,8 +1,14 @@
 :root {
-    --card-set-gap: 30px;
-    --card-shadow: 0px  1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
+--card-set-gap: 30px;
+--member-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+                0px 1px 1px rgba(0, 0, 0, 0.14),
+                0px 2px 1px rgba(0, 0, 0, 0.2);
+--card-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+--filter-btn-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+                   0px 1px 2px rgba(0, 0, 0, 0.08), 
+                   0px 2px 2px rgba(0, 0, 0, 0.12);
     
     /*font*/
     --main-font: 'Roboto', sans-serif;
@@ -18,6 +24,7 @@
     --accent-cl: #2196F3;
     --transparent-cl:rgba(255, 255, 255, 0.6);
     --icons-cl: #AFB1B8;
+    --social-cl: #C4C4C4;
 
     /*background-colors*/
     --main-bg-cl: #FFFFFF;
@@ -26,6 +33,10 @@
     --btn-bg: #188CE8;
     --grey-bg-cl: #E5E5E5;
     --card-border-cl: #EEEEEE;
+
+    /* grid items */
+        --items: 1;
+        
 }
 
 body {
@@ -50,7 +61,7 @@ body {
 }
 
 .container {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -174,8 +185,6 @@ border: 1px solid var(--header-border-cl);
 
 .contact .item {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -190,9 +199,7 @@ border: 1px solid var(--header-border-cl);
 padding-top: 32px;
 padding-bottom: 32px;
 display: flex;
-    align-items: center;
-
-    color: ;
+align-items: center;
 }
 
 .nav .link:hover,
@@ -213,7 +220,12 @@ color: var(--accent-cl);
 ============================
 */
 .hero {
-    background-color: var(--dark-bg-cl); 
+    /*background-color: var(--social-cl);*/
+    background-image: url(../images/geroy-fon.png),
+        linear-gradient (rgba(to bottom 47, 48, 58, 0.4)); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover ;
     padding-top: 200px;
     padding-bottom: 200px;
 
@@ -293,10 +305,28 @@ color: #212121;
 ============================
 */
 
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: var(--indent);
+}
+
+.grid-item {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
 
 .feature, .list {
     display: flex; 
   }
+
+.picture{
+    background-color: var(--secondary-bg-cl);
+    width: 270px;
+    height: 120px;
+}
+
+
 
 .feature .item {
     margin-right: 30px;
@@ -350,15 +380,14 @@ text-transform: uppercase;
 | Team section
 ============================
 */
+
 .teams {
 background-color: var(--secondary-bg-cl);
 }
 
-
 .team {
 padding: 0;
 margin: 0;
-
 display: flex;
 flex-wrap: wrap;
 margin-left: calc(-1 * var(--card-set-gap));
@@ -372,7 +401,6 @@ margin-top: var(--card-set-gap);
 }
 
 .member .title {
-
 margin-bottom: 10px;
 color: var(--secondary-txt-cl);
 font-weight: 500;
@@ -392,7 +420,7 @@ margin-bottom: 16px;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: var(--main-bg-cl);
-    box-shadow: var(--card-shadow);
+    box-shadow: var(--member-shadow);
     border-radius: 0px 0px 4px 4px;
     overflow: hidden;
 }
@@ -412,13 +440,10 @@ margin-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 44px;
     height: 44px;
-
     background-color: var(--main-bg-cl);
     color: var(--icons-cl);
-
     border-radius: 50%;
 }
 
@@ -432,15 +457,50 @@ margin-bottom: 16px;
     fill: currentColor;
 }
 
-/* .socials-icon {
-  fill: #303030;
-}
-.socials-link:hover .socials-icon,
-.socials-link:focus .socials-icon {
-  fill: #ff6c00;
-} */
+/* Clients icons */
 
-/**
+
+.client .list {
+    
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--card-set-gap);
+}
+
+.client .item {
+    flex-basis: calc((100% - var(var(--card-set-gap)) * (var(--items) - 1)) / var(--items));
+    background-color: var(--grey-bg-cl);
+}
+
+.client .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;
+
+    border: 1px solid var(--icons-cl);
+    border-radius: 4px;
+}
+
+.client .link:hover,
+.client .icon:hover
+{
+    border-color: var(--accent-cl);
+    fill: var(--accent-cl);
+}
+
+.client .icon {
+    fill: var(--icons-cl);
+}
+
+.client .link:focus,
+.client .icon:focus
+{
+    fill: var(--accent-cl);
+}
 
 /*============================
 | Portfolio page
@@ -463,6 +523,7 @@ margin-bottom: 16px;
 .filter .item {
 margin-right: 8px;
 }
+
 .filter .btn {
     padding: 6px 22px;
     border: none;
@@ -471,6 +532,11 @@ margin-right: 8px;
 
 .filter .item:last-child {
     margin-right: 0;}
+
+.filter .item:hover,
+.filter .item:focus {
+    box-shadow: var(--filter-btn-shadow);
+}
 
     /*Ourwork*/
 
@@ -490,11 +556,18 @@ margin-right: 8px;
     flex-basis: calc(100% / 3 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
+    
+}
+
+.work>.item:hover,
+.work>.item:focus {
+box-shadow: var(--card-shadow);
+border: 1px solid var(--card-border-cl);
 }
 
 .card {
     padding: 20px 24px;
-    border: 1px solid var(--card-border-cl); 
+     
 }
 
 .card .title {
@@ -524,7 +597,9 @@ margin-right: 8px;
     padding-top: 60px;
     padding-bottom: 60px;
    }
-
+.footer .container{
+    display: flexbox;
+}
 .footer .list{
 display: block;
 margin-top: 20px;
@@ -550,4 +625,8 @@ color: var(--transparent-cl);
 .footer .item:hover,
 .footer .item:focus {
     color: var(--accent-cl);}
+
+.footer .socials{
+    margin-right: 70px;
+}
 
