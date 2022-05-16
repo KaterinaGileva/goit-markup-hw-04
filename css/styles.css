@@ -108,6 +108,7 @@ img{
 .accent {
     color: var(--accent-cl);
 }
+
 /*
 ============================
 | Header section
@@ -115,16 +116,13 @@ img{
 */
 
 /*Logo*/
+
 .header {
 border: 1px solid var(--header-border-cl);
-
 }
-
-
 .header .container {
     display: flex;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .header .logo,.footer .logo {
@@ -181,6 +179,7 @@ border: 1px solid var(--header-border-cl);
 .contact .list{
     display: flex;
     align-items: center;
+    
 }
 
 .contact .item {
@@ -219,16 +218,18 @@ color: var(--accent-cl);
 | Hero section
 ============================
 */
-.hero {
-    /*background-color: var(--social-cl);*/
-    background-image: url(../images/geroy-fon.png);
-        /*linear-gradient (rgba(to bottom 47, 48, 58, 0.4)); */
+.hero-container {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--social-cl);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/geroy-fon.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover ;
-    padding-top: 200px;
-    padding-bottom: 200px;
-
 }
 
 .hero .title { 
@@ -539,20 +540,18 @@ margin-right: 8px;
     
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(-1 * var(--card-set-gap));
-    margin-top: calc(-1 * var(--card-set-gap));
+    gap: var(--card-set-gap);
+}
+
+.work.item {
+
+    --items: 9;
+    flex-basis: calc((100% - var(--card-set-gap) * (var(--items) - 1)) / var(--items));
     
 }
 
-.work>.item {
-    flex-basis: calc(100% / 3 - var(--card-set-gap));
-    margin-left: var(--card-set-gap);
-    margin-top: var(--card-set-gap);
-    
-}
-
-.work>.item:hover,
-.work>.item:focus {
+.work .item:hover,
+.work .item:focus {
 box-shadow: var(--card-shadow);
 border: 1px solid var(--card-border-cl);
 }
@@ -588,18 +587,19 @@ border: 1px solid var(--card-border-cl);
     color: var(--accent-txt-cl);
     padding-top: 60px;
     padding-bottom: 60px;
-   }
-.footer .container{
-    display: flexbox;
 }
-.footer .list{
-display: block;
+
+.footer .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.adress .list{
 margin-top: 20px;
 }
 
 .footer .logo {
-
-
 color: var(--accent-txt-cl);
 }
 
@@ -607,26 +607,41 @@ color: var(--accent-txt-cl);
 color: var(--accent-cl)
 }
 
-.footer .item {
+.ad-item {
+    text-color: var(--main-bg-cl);
+    margin-bottom: 9px;
+}
+.adress .item {
 margin-bottom: 9px;
-
 color: var(--transparent-cl);
-
 }
 
 .footer .item:hover,
 .footer .item:focus {
-    color: var(--accent-cl);}
-
-.footer .socials{
-    margin-right: 70px;
+    color: var(--accent-cl);
 }
 
-.footer .link {
-background-color: rgba(255, 255, 255, 0.1);
+.ad-item:hover,
+.ad-item:focus {
+    color: var(--accent-cl);
 }
-.footer .link:hover,
-.footer .link:focus {
-background-color: var(--accent-cl);
+
+.social-icon{
+ margin-left: 70px;   
+}
+
+.social-icon .title{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.social-icon .link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon .link:hover,
+.social-icon .link:focus {
+    background-color: var(--accent-cl);
 }
 
