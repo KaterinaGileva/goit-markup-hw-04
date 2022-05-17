@@ -605,7 +605,7 @@ color: var(--accent-cl)
 }
 
 .ad-item {
-    color: var(--main-bg-cl);
+    color: white;
     margin-bottom: 9px;
 }
 .adress .item {
