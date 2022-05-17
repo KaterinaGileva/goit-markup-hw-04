@@ -592,7 +592,7 @@ box-shadow: var(--card-shadow);
     align-items: baseline;
 }
 
-.adress .list{
+.adres .list{
 margin-top: 20px;
 }
 
@@ -604,11 +604,11 @@ color: var(--accent-txt-cl);
 color: var(--accent-cl)
 }
 
-.adress-item {
+.adres-item {
     color: var(--main-bg-cl);
     margin-bottom: 9px;
 }
-.adress .item {
+.adres .item {
 margin-bottom: 9px;
 color: var(--transparent-cl);
 }
@@ -618,8 +618,8 @@ color: var(--transparent-cl);
     color: var(--accent-cl);
 }
 
-.adress-item:hover,
-.adress-item:focus {
+.adres-item:hover,
+.adres-item:focus {
     color: var(--accent-cl);
 }
 
