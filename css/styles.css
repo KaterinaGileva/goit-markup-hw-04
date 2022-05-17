@@ -233,8 +233,8 @@ color: var(--accent-cl);
 }
 
 .hero .title { 
-    padding-left: 252px;
-    padding-right: 252px;
+    padding-left: 452px;
+    padding-right: 452px;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -452,7 +452,7 @@ margin-bottom: 16px;
 /* Clients icons */
 
 
-.client .list {
+.clients {
     
     padding: 0;
     display: flex;
@@ -460,37 +460,34 @@ margin-bottom: 16px;
     gap: var(--card-set-gap);
 }
 
-.client .item {
+.clients-item {
     --items: 6;
     flex-basis: calc((100% - var(--card-set-gap) * (var(--items) - 1)) / var(--items));
-    background-color: var(--grey-bg-cl);
+    
 }
 
-.client .link {
+.clients-link {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 170px;
     height: 92px;
-
     border: 1px solid var(--icons-cl);
     border-radius: 4px;
 }
 
-.client .link:hover,
-.client .icon:hover
-{
-    border-color: var(--accent-cl);
-    fill: var(--accent-cl);
-}
-
-.client .icon {
+.clients-icon {
     fill: var(--icons-cl);
 }
 
-.client .link:focus,
-.client .icon:focus
+.clients-link:hover
+{
+    border-color: var(--accent-cl);
+    
+}
+
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon
 {
     fill: var(--accent-cl);
 }
@@ -553,7 +550,7 @@ margin-right: 8px;
 .work .item:hover,
 .work .item:focus {
 box-shadow: var(--card-shadow);
-border: 1px solid var(--card-border-cl);
+/*border: 1px solid var(--card-border-cl);*/
 }
 
 .card {
@@ -608,7 +605,7 @@ color: var(--accent-cl)
 }
 
 .ad-item {
-    text-color: var(--main-bg-cl);
+    color: var(--main-bg-cl);
     margin-bottom: 9px;
 }
 .adress .item {
@@ -631,13 +628,18 @@ color: var(--transparent-cl);
 }
 
 .social-icon .title{
-    text-align: center;
-    text-transform: uppercase;
+
     margin-bottom: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
 }
 
 .social-icon .link {
     background-color: rgba(255, 255, 255, 0.1);
+    color: var(--main-bg-cl);
 }
 
 .social-icon .link:hover,
