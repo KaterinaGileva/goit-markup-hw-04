@@ -605,7 +605,7 @@ color: var(--accent-cl)
 }
 
 .adress-item {
-    color: white;
+    color: var(--main-bg-cl);
     margin-bottom: 9px;
 }
 .adress .item {
@@ -618,8 +618,8 @@ color: var(--transparent-cl);
     color: var(--accent-cl);
 }
 
-.ad-item:hover,
-.ad-item:focus {
+.adress-item:hover,
+.adress-item:focus {
     color: var(--accent-cl);
 }
 
