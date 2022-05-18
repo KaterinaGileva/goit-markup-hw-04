@@ -550,12 +550,12 @@ margin-right: 8px;
 .work .item:hover,
 .work .item:focus {
 box-shadow: var(--card-shadow);
-/*border: 1px solid var(--card-border-cl);*/
+
 }
 
 .card {
     padding: 20px 24px;
-     
+    border: 1px solid var(--card-border-cl);
 }
 
 .card .title {
